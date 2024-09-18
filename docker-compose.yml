@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-    db:
+    db_lutece_site:
         image: mariadb:10.5
-        container_name: db
+        container_name: db_lutece_site
         ports:
             - "3308:3306"
         restart: unless-stopped
@@ -20,7 +20,10 @@ services:
         container_name: site-lutece
         ports:
             - 8080:8080
+        restart: unless-stopped
         depends_on:
-            - db
+            - db_lutece_site
         volumes:
             -   ./volume-site-lutece:/usr/local/tomcat/webapps/ROOT
+            # logs catalina
+            -  ./logs:/usr/local/tomcat/logs

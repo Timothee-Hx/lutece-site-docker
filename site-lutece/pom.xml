@@ -11,10 +11,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.paris.lutece</groupId>
-    <artifactId>my-lutece-site</artifactId>
+    <artifactId>lutece</artifactId>
     <packaging>lutece-site</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <name>My Site</name>
+    <name>lutece</name>
 
     <repositories>
         <repository>
